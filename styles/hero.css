@@ -1,21 +1,24 @@
+
+& .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10rem;
+  padding-block: 3.5rem;
+  & button {
+    background: var(--pink-dark);
+    border-radius: 0.5rem;
+    border: none;
+    padding: 20px 12px;
+    color: var(--text-title);
+  }
+}
 #hero {
   background: url(../assets/hero-background.png) no-repeat;
   background-size: contain;
+  opacity: 0.1;
   aspect-ratio: 1440 / 800; 
   margin-bottom: 56px;
-  & .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 10rem;
-    padding-block: 3.5rem;
-    & button {
-      background: var(--pink-dark);
-      border-radius: 0.5rem;
-      border: none;
-      padding: 20px 12px;
-      color: var(--text-title);
-    }
-  }
+  animation: hero-background 4s ease-in-out  both;
   & .tittle {
     text-align: center;
     color: var(--text-title);
@@ -24,6 +27,15 @@
     flex-direction: column;
     gap: 2rem;
     margin: auto;
+    & p{
+      opacity: 0;
+      animation: hero-background 4s ease-in both 200ms;
+    }
+  }
+}
+@keyframes hero-background {
+  to{
+    opacity: 1;
   }
 }
 
