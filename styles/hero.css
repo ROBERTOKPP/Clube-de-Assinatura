@@ -1,21 +1,22 @@
-#hero{
-  background: url("../assets/hero-background.png") no-repeat;
+#hero {
+  background: url(../assets/hero-background.png) no-repeat;
   background-size: contain;
-  height: 948px;
-  & .navbar{
+  aspect-ratio: 1440 / 800; 
+  margin-bottom: 56px;
+  & .navbar {
     display: flex;
     justify-content: space-between;
-    padding-inline: 160px;
-    padding-block: 56px;
-    & button{
+    padding-inline: 10rem;
+    padding-block: 3.5rem;
+    & button {
       background: var(--pink-dark);
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       border: none;
       padding: 20px 12px;
       color: var(--text-title);
     }
   }
-  & .tittle{
+  & .tittle {
     text-align: center;
     color: var(--text-title);
     max-width: 656px;
@@ -24,8 +25,94 @@
     gap: 2rem;
     margin: auto;
   }
-} 
+}
 
-#hero1{
-  text-align: center;
+#hero1 {
+  position: relative;
+  height: 25rem;
+  display: flex;
+  padding-block: 6rem;
+  align-items: center;
+  &:hover {
+    & div:nth-child(1) {
+      animation: color-text 300ms linear both 800ms;
+    }
+    & div:nth-child(2) {
+      animation: color-text 300ms linear both;
+    }
+    & div:nth-child(3) {
+      animation: color-text 300ms linear both 400ms;
+    }
+    & p {
+      & > span:nth-child(1) {
+        animation: color-text 300ms linear both;
+        & .span-blue-light {
+          animation: color-blue-light 300ms linear both 100ms;
+        }
+      }
+      & > span:nth-child(2) {
+        animation: color-text 300ms linear both 400ms;
+        & .span-blue-light {
+          animation: color-blue-light 300ms linear both 500ms;
+        }
+      }
+      & > span:nth-child(3) {
+        animation: color-text 300ms linear both 800ms;
+        & .span-blue-light {
+          animation: color-blue-light 300ms linear both 900ms;
+        }
+      }
+    }
+  }
+  & div {
+    position: absolute;
+    & img {
+      width: 5.5rem;
+      &:hover {
+        scale: 1.1;
+        transform: rotate(20deg);
+        transition: 550ms;
+      }
+    }
+  }
+  & div:nth-child(1) {
+    right: 3%;
+    bottom: 10%;
+    transform: rotate(-15deg);
+    opacity: 0;
+  }
+  & div:nth-child(2) {
+    left: 40%;
+    top: 5%;
+    opacity: 0;
+  }
+  & div:nth-child(3) {
+    left: 5%;
+    bottom: 10%;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  & p {
+    padding-inline: 2rem;
+    text-align: center;
+    font: var(--font-subtitle);
+    color: #e2e7e980;
+    & .span-blue-light {
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes color-text {
+  to {
+    color: var(--text-body);
+    opacity: 1;
+  }
+}
+
+@keyframes color-blue-light {
+  to {
+    color: var(--blue-light);
+  }
 }
