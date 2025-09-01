@@ -1,0 +1,31 @@
+#hero{
+  background: url("../assets/hero-background.png") no-repeat;
+  background-size: contain;
+  height: 948px;
+  & .navbar{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 160px;
+    padding-block: 56px;
+    & button{
+      background: var(--pink-dark);
+      border-radius: .5rem;
+      border: none;
+      padding: 20px 12px;
+      color: var(--text-title);
+    }
+  }
+  & .tittle{
+    text-align: center;
+    color: var(--text-title);
+    max-width: 656px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
+  }
+} 
+
+#hero1{
+  text-align: center;
+}
