@@ -18,7 +18,7 @@
   opacity: 0.1;
   aspect-ratio: 1440 / 800; 
   margin-bottom: 56px;
-  animation: hero-background 4s ease-in-out  both;
+  animation: hero-background 3s ease-in-out  both;
   & .tittle {
     text-align: center;
     color: var(--text-title);
@@ -29,7 +29,7 @@
     margin: auto;
     & p{
       opacity: 0;
-      animation: hero-background 4s ease-in both 200ms;
+      animation: hero-background 3s ease-in both 200ms;
     }
   }
 }

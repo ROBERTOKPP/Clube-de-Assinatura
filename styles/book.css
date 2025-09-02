@@ -1,0 +1,92 @@
+#book-kit {
+  & > div:nth-child(1) {
+    text-align: center;
+    margin-block: 235px 88px;
+    & h2{
+      margin-bottom:  .5rem ;
+    }
+   & div{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+   }
+  }
+
+  .book-kit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 920px;
+
+    & img {
+      height: 100%;
+      width: auto;
+    }
+
+    & .bookmark-yellow,
+    .bookmark-purple,
+    .pin,
+    .book-text {
+      position: absolute;
+      transition: 900ms ease-in-out;
+    }
+
+    & .book-text {
+      & div:nth-child(1),
+      div:nth-child(2),
+      div:nth-child(3) {
+        transition: 900ms ease-in-out;
+      }
+    }
+
+    & .book {
+      z-index: 1;
+      position: absolute;
+      height: calc(100% - 143px);
+    }
+
+    & .pin {
+      z-index: -2;
+
+      & img {
+        width: 256px;
+      }
+    }
+
+    & .bookmark-yellow {
+      height: calc(100% - 170px);
+      bottom: 10%;
+      z-index: 0;
+    }
+
+    & .bookmark-purple {
+      height: calc(100% - 170px);
+      z-index: -1;
+    }
+
+    &:hover {
+      & .book-text {
+        & div:nth-child(1) {
+          transform: translateX(-375px) translateY(-210px);
+        }
+        & div:nth-child(2) {
+          transform: translateX(-370px) translateY(230px);
+        }
+        & div:nth-child(3) {
+          transform: translateX(430px) translateY(250px);
+        }
+      }
+
+      & .bookmark-yellow {
+        transform: rotate(13deg) translateX(110%) translateY(-30%);
+      }
+      & .bookmark-purple {
+        transform: rotate(23deg) translateX(165%) translateY(-28%);
+      }
+      & .pin {
+        transform: rotate(-15deg) translateX(-380px) translateY(80%);
+      }
+    }
+  }
+}
