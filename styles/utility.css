@@ -2,3 +2,32 @@
   margin-inline: auto;
   max-width: 1440px;
 }
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+.flex-space-between{
+  justify-content: space-between;
+}
+
+.btn-primary{
+ & button {
+    background: var(--pink-dark);
+    border-radius: 0.5rem;
+    border: none;
+    padding: .875rem 0.75rem;
+    color: var(--text-title);
+  }
+}
+
+.btn-secondary{
+ & button {
+    background: var(--blue-dark);
+    border-radius: 0.5rem;
+    border: none;
+    padding: .875rem 0.75rem;
+    color: var(--text-title);
+    width: 100%;
+  }
+}

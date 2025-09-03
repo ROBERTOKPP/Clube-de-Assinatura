@@ -30,13 +30,16 @@
   --text-body: #e2e7e9;
   --text-label: #bac6c9;
 
-
-
   --font-family: "Raleway", sans-serif;
-  --font-title-lg: 700 3rem var(--font-family);   /* 48px */
-  --font-title-sm: 700 2rem var(--font-family); 
-  --font-body-lg: 400 1.25rem/140% var(--font-family); 
+  --font-title-lg: 700 3rem var(--font-family); /* 48px */
+  --font-title-md: 700 2.5rem var(--font-family); /* 40px */
+  --font-title-sm: 700 2rem var(--font-family);
+  --font-body-lg: 400 1.25rem/140% var(--font-family);
+  --font-body-sm: 400 0.875rem/140% var(--font-family);  /* 14px */
+  --font-body-xs: 400 0.75rem/140% var(--font-family); 
   --font-subtitle: 500 2rem/200% var(--font-family);
+  --font-title-xs: 700 1rem var(--font-family);
+  --font-tag: 700 0.625rem var(--font-family);  
 }
 
 body {
@@ -46,11 +49,10 @@ body {
 
 h1 {
   font: var(--font-title-lg);
-  
 }
-h2{
- font: var(--font-title-lg);
+h2 {
+  font: var(--font-title-lg);
 }
-p{
+p {
   font: var(--font-body-lg);
 }

@@ -8,7 +8,7 @@
     background: var(--pink-dark);
     border-radius: 0.5rem;
     border: none;
-    padding: 20px 12px;
+    padding: 1.25rem 0.75rem;
     color: var(--text-title);
   }
 }
