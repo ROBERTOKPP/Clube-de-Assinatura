@@ -1,9 +1,9 @@
 .container {
   margin-inline: auto;
-  max-width: 1440px;
+  width: 1440px;
 }
 
-.flex{
+.flex{  
   display: flex;
   align-items: center;
 }

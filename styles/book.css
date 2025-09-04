@@ -1,4 +1,8 @@
 #book-kit {
+  background: url(../assets/img/blur-book.png);
+  background-size: 100%;
+
+  padding-block: 235px 270px;
   & > div:nth-child(1) {
     text-align: center;
     margin-block: 235px 88px;
@@ -17,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 920px;
+    height: 57.5rem;
 
     & img {
       height: 100%;
@@ -43,49 +47,50 @@
     & .book {
       z-index: 1;
       position: absolute;
-      height: calc(100% - 143px);
+      height: 38.5rem;
+     
     }
 
     & .pin {
       z-index: -2;
-
       & img {
-        width: 256px;
+        width: 12rem;
       }
     }
 
     & .bookmark-yellow {
-      height: calc(100% - 170px);
-      bottom: 10%;
+      height: 33.5rem;
+      bottom: 18%;
       z-index: 0;
     }
 
     & .bookmark-purple {
-      height: calc(100% - 170px);
+      height: 33.5rem;
       z-index: -1;
+      bottom: 18%;
     }
 
     &:hover {
       & .book-text {
         & div:nth-child(1) {
-          transform: translateX(-375px) translateY(-210px);
+          transform: translateX(-320px) translateY(-150px);
         }
         & div:nth-child(2) {
-          transform: translateX(-370px) translateY(230px);
+          transform: translateX(-290px) translateY(160px);
         }
         & div:nth-child(3) {
-          transform: translateX(430px) translateY(250px);
+          transform: translateX(310px) translateY(200px);
         }
       }
 
       & .bookmark-yellow {
-        transform: rotate(13deg) translateX(110%) translateY(-30%);
+        transform: rotate(13deg) translateX(115%) translateY(-40%);
       }
       & .bookmark-purple {
-        transform: rotate(23deg) translateX(165%) translateY(-28%);
+        transform: rotate(23deg) translateX(170%) translateY(-30%);
       }
       & .pin {
-        transform: rotate(-15deg) translateX(-380px) translateY(80%);
+        transform: rotate(-15deg) translateX(-300px) translateY(80%);
       }
     }
   }

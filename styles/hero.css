@@ -14,9 +14,9 @@
 }
 #hero {
   background: url(../assets/hero-background.png) no-repeat;
-  background-size: contain;
+  background-size: 100%;
   opacity: 0.1;
-  aspect-ratio: 1440 / 800; 
+  aspect-ratio: 1440 / 800;                             
   margin-bottom: 56px;
   animation: hero-background 3s ease-in-out  both;
   & .tittle {

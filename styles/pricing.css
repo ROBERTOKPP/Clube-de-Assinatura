@@ -1,11 +1,17 @@
 #pricing {
+  padding-inline: 180px;
+  padding-block: 194px 230px ;
+  background: url(../assets/img/blur-pricing.png)  no-repeat ;
+  background-size: 100%;
+  background-position: center;
   & h2 {
     text-align: center;
+    padding-bottom: 128px ;
   }
 
   & .pricing-table {
     position: relative;
-    width: 100%;
+  
     height: 500px;
     display: flex;
     justify-content: center;

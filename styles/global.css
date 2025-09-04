@@ -40,11 +40,14 @@
   --font-subtitle: 500 2rem/200% var(--font-family);
   --font-title-xs: 700 1rem var(--font-family);
   --font-tag: 700 0.625rem var(--font-family);  
+  --font-link: 500 0.875rem var(--font-family);  
+  
 }
 
 body {
   background: var(--shape-background);
   color: var(--text-body);
+  overflow-x: hidden;
 }
 
 h1 {
