@@ -16,14 +16,18 @@
     & figure {
       display: flex;
       justify-content: center;
+      align-items: center;
       border-radius: 50%;
       width: 2.5rem;
       height: 2.5rem;
-      & img {
-        width: 1.5rem;
+      svg path {
+        fill: var(--blue-light);
       }
       &:hover {
         background-color: var(--shape-stroke);
+        svg path {
+          fill: var(--text-body);
+        }
       }
     }
   }

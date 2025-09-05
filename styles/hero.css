@@ -12,6 +12,7 @@
     padding: 1.25rem;
     & .display-mobile {
       display: initial;
+      height: 48px;
     }
     & .display-desktop {
       display: none;
