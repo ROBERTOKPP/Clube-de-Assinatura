@@ -1,17 +1,17 @@
 #pricing {
   padding-inline: 180px;
-  padding-block: 194px 230px ;
-  background: url(../assets/img/blur-pricing.png)  no-repeat ;
+  padding-block: 194px 230px;
+  background: url(../assets/img/blur-pricing.png) no-repeat;
   background-size: 60%;
   background-position: center;
   & h2 {
     text-align: center;
-    padding-bottom: 128px ;
+    padding-bottom: 128px;
   }
 
   & .pricing-table {
     position: relative;
-  
+
     height: 500px;
     display: flex;
     justify-content: center;
@@ -102,107 +102,39 @@
   }
 }
 
-@media (width <= 1000px){
-#pricing {
-  padding-inline: 0;
-  padding-block: 6.5;
+@media (width <= 1000px) {
+  #pricing {
+    padding-inline: 0;
+    padding-block: 6.5;
+    background-size: 100%;
 
-  background-size: 100%;
-  & h2 {
-    font-size: 1.5rem;
-  }
+    & h2 {
+      font-size: 1.5rem;
+      padding-bottom: 2rem;
+    }
 
-  & .pricing-table {
-    position: initial;
-    height: 25rem;
-    gap: 1rem;
-    overflow-x: auto;
-    &:hover {
-      & .monthly {
-        transform: none;
-      }
-      & .annual {
-        transform:  none;
-      }
-    }
-  }
-  & .cards {
-    transition: transform 1s ease-in-out;
-    position: initial;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 17rem;
-    height: 25rem;
-    background: var(--shape-base);
-    border: 1px solid var(--shape-stroke);
-    border-radius: 1.5rem;
-    padding: 1.7rem 2rem;
-    & span {
-      background: var(--shape-stroke);
-      border-radius: 999px;
-      padding: 0.5rem 1.25rem;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-    & button {
-      width: 100%;
-      margin-top: 0.625rem;
-    }
-    & h3 {
-      font: var(--font-title-xs);
-    }
-    & p {
-      font: var(--font-body-sm);
-      color: var(--text-label);
-    }
-    & .price {
-      margin-block: 1.5rem 0.5rem;
-      font: var(--font-title-md);
-      color: var(--text-title);
-      & > span {
-        all: unset;
-        font: var(--font-title-xs);
+    & .pricing-table {
+      position: initial;
+      padding: 1rem;
+      display: grid;
+      grid-auto-flow: column;
+      gap: 1rem;
+      overflow-x: auto;
+      &:hover {
+        & .monthly {
+          transform: none;
+        }
+        & .annual {
+          transform: none;
+        }
       }
     }
-
-    & li {
-      list-style: none;
-      margin-bottom: 0.875rem;
-      font: var(--font-body-xs);
-      & img {
-        margin-right: 0.5rem;
-        width: 14px;
-      }
+    & .cards {
+      position: initial;
+      display: flex;
+      flex-direction: column;
+      width: 18rem;
+      height: 25rem;
     }
   }
-  & .monthly,
-  .Biannual,
-  .annual {
-    &:hover {
-      background-color: var(--shape-hover);
-      -webkit-box-shadow: 5px 5px 32px 21px rgba(53, 139, 185, 0.1);
-      box-shadow: 5px 5px 32px 21px rgba(53, 139, 185, 0.1);
-      z-index: 4;
-    }
-  }
-  & .monthly,
-  .annual {
-    z-index: 2;
-    & h3 {
-      color: var(--blue-base);
-    }
-  }
-
-  & .Biannual {
-    z-index: 3;
-    & h3 {
-      color: var(--pink-light);
-    }
-  }
-}
-
-
-
-
 }
