@@ -4,6 +4,9 @@
   padding-inline: 10rem;
   height: 415px;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+
   & .brand {
     & .divider {
       display: block;
@@ -49,55 +52,15 @@
     background-position: center bottom;
     background-size: 100%;
     padding-inline: 1rem;
-    height: 415px;
-    border: solid red;
+    height: 500px;
     align-items: center;
-    & .flex {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-    }
-    & .flex-space-between {
-      justify-content: space-between;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
     & .brand {
-      & .flex {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-      }
       & .divider {
         display: none;
-      }
-      & figure {
-        display: flex;
-        justify-content: center;
-        border-radius: 50%;
-        width: 2.5rem;
-        height: 2.5rem;
-        & img {
-          width: 1.5rem;
-        }
-        &:hover {
-          background-color: var(--shape-stroke);
-        }
-      }
-    }
-    & > div:nth-child(2) {
-      gap: 3.5rem;
-    }
-    & nav {
-      & h2 {
-        font: var(--font-title-xs);
-        margin-bottom: 1.25rem;
-      }
-      & ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        font: var(--font-link);
-        color: var(--blue-light);
-        list-style: none;
       }
     }
   }
