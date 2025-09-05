@@ -3,7 +3,20 @@
   justify-content: space-between;
   padding-inline: 10rem;
   padding-block: 3.5rem;
-
+  & .display-mobile {
+    display: none;
+  }
+}
+@media (width <= 1000px) {
+  & .navbar {
+    padding: 1.25rem;
+    & .display-mobile {
+      display: initial;
+    }
+    & .display-desktop {
+      display: none;
+    }
+  }
 }
 #hero {
   background: url(../assets/hero-background.png) no-repeat;
@@ -26,6 +39,27 @@
     }
   }
 }
+
+@media (width <= 1000px) {
+  #hero {
+    background-size: 250%;
+    background-position: top center;
+    height: 530px;
+    margin-bottom: 0;
+    & .tittle {
+      gap: 1rem;
+      padding-inline: 1.25rem;
+      & h1 {
+        margin-top: 3rem;
+        font-size: 1.75rem;
+      }
+      & p {
+     font-size: 1rem;
+    }
+    }
+  }
+}
+
 @keyframes hero-background {
   to {
     opacity: 1;
@@ -72,6 +106,7 @@
   }
   & div {
     position: absolute;
+    opacity: 0;
     & img {
       width: 5.5rem;
       &:hover {
@@ -85,18 +120,15 @@
     right: 3%;
     bottom: 10%;
     transform: rotate(-15deg);
-    opacity: 0;
   }
   & div:nth-child(2) {
     left: 40%;
     top: 5%;
-    opacity: 0;
   }
   & div:nth-child(3) {
     left: 5%;
     bottom: 10%;
     transform: rotate(90deg);
-    opacity: 0;
   }
 
   & p {
@@ -108,6 +140,37 @@
       font-weight: bold;
     }
   }
+}
+
+@media (width <= 1000px){
+  #hero1 {
+  height: 14rem;
+  display: flex;
+  padding-block: 3rem;
+  & div {
+    & img {
+      width: 2.5rem;
+    }
+  }
+  & div:nth-child(1) {
+    right: 5%;
+    bottom: 5%;
+    transform: rotate(15deg);
+  }
+  & div:nth-child(2) {
+    left: 70%;
+  }
+  & div:nth-child(3) {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(315deg);
+  }
+  & p {
+    padding-inline: 2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
 }
 
 @keyframes color-text {
@@ -123,32 +186,30 @@
   }
 }
 
-.blur-hero {
+/* .blur-hero {
   position: relative;
   .blur {
-    & img:nth-child(1){
+    & img:nth-child(1) {
       position: absolute;
       bottom: 70%;
-      right: 0; 
+      right: 0;
     }
-    & img:nth-child(2){
+    & img:nth-child(2) {
       position: absolute;
       bottom: 30%;
-      left: 0; 
+      left: 0;
     }
-    & img:nth-child(3){
+    & img:nth-child(3) {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 0; 
-     
+      z-index: 0;
     }
-       & img:nth-child(4){
+    & img:nth-child(4) {
       position: absolute;
       bottom: 2%;
       right: 0;
-      z-index: 0; 
-     
+      z-index: 0;
     }
   }
-}
+} */

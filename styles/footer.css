@@ -17,7 +17,7 @@
       border-radius: 50%;
       width: 2.5rem;
       height: 2.5rem;
-      img{
+      & img{
         width: 1.5rem;
       }
       &:hover {
@@ -34,7 +34,7 @@
       font: var(--font-title-xs);
       margin-bottom: 1.25rem;
     }
-    ul {
+    & ul {
       display: flex;
       flex-direction: column;
       gap: 0.75rem;

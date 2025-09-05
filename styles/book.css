@@ -1,5 +1,5 @@
 #book-kit {
-  background: url(../assets/img/blur-book.png);
+  background: url(../assets/img/blur-book.png) no-repeat;
   background-size: 70%;
   background-position: center;
 
@@ -7,14 +7,14 @@
   & > div:nth-child(1) {
     text-align: center;
     margin-block: 235px 88px;
-    & h2{
-      margin-bottom:  .5rem ;
+    & h2 {
+      margin-bottom: 0.5rem;
     }
-   & div{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-   }
+    & div {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
   }
 
   .book-kit {
@@ -31,7 +31,7 @@
 
     & .bookmark-yellow,
     .bookmark-purple,
-    .pin,
+    .pin1,
     .book-text {
       position: absolute;
       transition: 900ms ease-in-out;
@@ -49,10 +49,9 @@
       z-index: 1;
       position: absolute;
       height: 38.5rem;
-     
     }
 
-    & .pin {
+    & .pin1 {
       z-index: -2;
       & img {
         width: 12rem;
@@ -90,8 +89,87 @@
       & .bookmark-purple {
         transform: rotate(23deg) translateX(170%) translateY(-30%);
       }
-      & .pin {
+      & .pin1 {
         transform: rotate(-15deg) translateX(-300px) translateY(80%);
+      }
+    }
+  }
+}
+
+@media (width <= 1000px) {
+  #book-kit {
+    padding-block: 1rem;
+    & > div:nth-child(1) {
+      margin-block: 0.5rem;
+      & h2 {
+        font-size: 1.25rem;
+        & img {
+          width: 1.25rem;
+        }
+      }
+      & p {
+        font-size: 0.875rem;
+      }
+    }
+
+    .book-kit {
+      height: 20rem;
+      padding-top: 4rem;
+      & .book {
+        z-index: 1;
+        position: absolute;
+        height: 15rem;
+      }
+      & .pin1 {
+        z-index: -2;
+        & img {
+          width: 5rem;
+        }
+      }
+      & .bookmark-yellow {
+        height: 11.25rem;
+        bottom: 18%;
+        z-index: 0;
+      }
+      & .bookmark-purple {
+        height: 11.25rem;
+        z-index: -1;
+        bottom: 18%;
+      }
+      & .book-text {
+        & div:nth-child(1) {
+          height: 2rem;
+        }
+        & div:nth-child(2) {
+          height: 4rem;
+        }
+        & div:nth-child(3) {
+          height: 4.25rem;
+        }
+      }
+
+      &:hover {
+        & .book-text {
+          & div:nth-child(1) {
+            transform: translateX(-130px) translateY(-70px);
+          }
+          & div:nth-child(2) {
+            transform: translateX(-110px) translateY(60px);
+          }
+          & div:nth-child(3) {
+            transform: translateX(110px) translateY(85px);
+          }
+        }
+
+        & .bookmark-yellow {
+          transform: rotate(13deg) translateX(136%) translateY(-30%);
+        }
+        & .bookmark-purple {
+          transform: rotate(25deg) translateX(200%) translateY(-10%);
+        }
+        & .pin1 {
+          transform: rotate(-15deg) translateX(-120px) translateY(80%);
+        }
       }
     }
   }
