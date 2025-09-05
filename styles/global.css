@@ -47,7 +47,12 @@
 body {
   background: var(--shape-background);
   color: var(--text-body);
-  overflow-x: hidden;
+}
+@media (width <= 1000px) {
+  body{
+    overflow-x: hidden;
+  }
+  
 }
 
 h1 {
