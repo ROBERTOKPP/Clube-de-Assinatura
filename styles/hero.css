@@ -13,6 +13,7 @@
     & .display-mobile {
       display: initial;
       height: 48px;
+      width: 65px;
     }
     & .display-desktop {
       display: none;
