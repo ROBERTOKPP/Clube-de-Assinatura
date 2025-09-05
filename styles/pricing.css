@@ -2,7 +2,7 @@
   padding-inline: 180px;
   padding-block: 194px 230px ;
   background: url(../assets/img/blur-pricing.png)  no-repeat ;
-  background-size: 100%;
+  background-size: 60%;
   background-position: center;
   & h2 {
     text-align: center;
@@ -20,8 +20,6 @@
     &:hover {
       & .monthly {
         transform: translateX(-300px) rotate(-10deg) translatey(50px);
-      }
-      & .Biannual {
       }
       & .annual {
         transform: translateX(300px) rotate(10deg) translatey(50px);

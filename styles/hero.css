@@ -1,24 +1,17 @@
-
 & .navbar {
   display: flex;
   justify-content: space-between;
   padding-inline: 10rem;
   padding-block: 3.5rem;
-  & button {
-    background: var(--pink-dark);
-    border-radius: 0.5rem;
-    border: none;
-    padding: 1.25rem 0.75rem;
-    color: var(--text-title);
-  }
+
 }
 #hero {
   background: url(../assets/hero-background.png) no-repeat;
   background-size: 100%;
   opacity: 0.1;
-  aspect-ratio: 1440 / 800;                             
+  aspect-ratio: 1440 / 800;
   margin-bottom: 56px;
-  animation: hero-background 3s ease-in-out  both;
+  animation: hero-background 3s ease-in-out both;
   & .tittle {
     text-align: center;
     color: var(--text-title);
@@ -27,14 +20,14 @@
     flex-direction: column;
     gap: 2rem;
     margin: auto;
-    & p{
+    & p {
       opacity: 0;
       animation: hero-background 3s ease-in both 200ms;
     }
   }
 }
 @keyframes hero-background {
-  to{
+  to {
     opacity: 1;
   }
 }
@@ -43,6 +36,7 @@
   position: relative;
   height: 25rem;
   display: flex;
+  max-width: 1200px;
   padding-block: 6rem;
   align-items: center;
   &:hover {
@@ -126,5 +120,35 @@
 @keyframes color-blue-light {
   to {
     color: var(--blue-light);
+  }
+}
+
+.blur-hero {
+  position: relative;
+  .blur {
+    & img:nth-child(1){
+      position: absolute;
+      bottom: 70%;
+      right: 0; 
+    }
+    & img:nth-child(2){
+      position: absolute;
+      bottom: 30%;
+      left: 0; 
+    }
+    & img:nth-child(3){
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0; 
+     
+    }
+       & img:nth-child(4){
+      position: absolute;
+      bottom: 2%;
+      right: 0;
+      z-index: 0; 
+     
+    }
   }
 }

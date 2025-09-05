@@ -1,6 +1,7 @@
 #book-kit {
   background: url(../assets/img/blur-book.png);
-  background-size: 100%;
+  background-size: 70%;
+  background-position: center;
 
   padding-block: 235px 270px;
   & > div:nth-child(1) {
